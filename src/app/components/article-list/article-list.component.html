@@ -1,0 +1,10 @@
+<mat-card-title>
+  Article list
+</mat-card-title>
+<mat-card-content>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let article of articleList">
+      <a [href]="article.link" matLine>{{article.title}}</a>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-card-content>
