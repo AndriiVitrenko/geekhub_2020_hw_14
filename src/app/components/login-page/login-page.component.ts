@@ -45,5 +45,15 @@ export class LoginPageComponent implements OnInit {
     else if (passwordErrors.hasOwnProperty('pattern')) {
       this.errors.password = 'Password must include numbers, capital and lowercase letters and be at least 8 symbols length.'
     }
+
+    if (this.errors.password === '' && this.errors.email === '') {
+      fetch('someServer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/xml',
+          'Authorization': `Basic ${btoa(this.form.controls.email + ":" +this.form.controls.password)}`
+        }
+      })
+    }
   }
 }
