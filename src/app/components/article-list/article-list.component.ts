@@ -9,27 +9,15 @@ export class ArticleListComponent {
   articleList = [
     {
       title: 'Article 1',
-      link: '/',
+      id: '1',
     },
     {
       title: 'Article 2',
-      link: '/',
+      id: '2',
     },
     {
       title: 'Article 3',
-      link: '/',
+      id: '3',
     },
-    {
-      title: 'Article 4',
-      link: '/',
-    },
-    {
-      title: 'Article 5',
-      link: '/',
-    },
-    {
-      title: 'Article 6',
-      link: '/',
-    },
-  ]
+  ];
 }

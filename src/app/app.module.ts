@@ -8,18 +8,20 @@ import {AppComponent} from './app.component';
 import {ArticleListComponent} from './components/article-list/article-list.component';
 import {ArticleComponent} from './components/article/article.component';
 import {LoginPageComponent} from './components/login-page/login-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { HomeComponent } from './components/home/home.component';
 import {SignupPageComponent} from './components/signup-page/signup-page.component';
 
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatListModule} from "@angular/material/list";
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
-import { HeaderComponent } from './components/header/header.component';
-import {MatSidenavModule} from "@angular/material/sidenav";
-import { MainComponent } from './components/main/main.component';
-import {MatCardModule} from "@angular/material/card";
-import { HomeComponent } from './components/home/home.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     MainComponent,
     HomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { HomeComponent } from './components/home/home.component';
     MatSidenavModule,
     MatCardModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

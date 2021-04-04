@@ -15,7 +15,7 @@ export class SignupPageComponent implements OnInit {
     name: '',
     surname: '',
     phone: '',
-  }
+  };
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -24,7 +24,7 @@ export class SignupPageComponent implements OnInit {
       name: new FormControl('', Validators.compose([Validators.required, Validators.pattern(/^[а-яйїьґa-z']+$/i)])),
       surname: new FormControl('', Validators.compose([Validators.required, Validators.pattern(/^[а-яйїьґa-z']+$/i)])),
       phone: new FormControl('', Validators.compose([Validators.required, Validators.pattern(/^\+\d{6,15}$/)])),
-    })
+    });
   }
 
   submit(): void {
@@ -34,50 +34,50 @@ export class SignupPageComponent implements OnInit {
       this.errors.email = '';
     }
     else if (email.errors.hasOwnProperty('required')) {
-      this.errors.email = 'Type your email here. This field has not to be empty.'
+      this.errors.email = 'Type your email here. This field has not to be empty.';
     }
     else if (email.errors.hasOwnProperty('email')) {
-      this.errors.email = 'Your email is incorrect. Check it again.'
+      this.errors.email = 'Your email is incorrect. Check it again.';
     }
 
     if (!password.errors) {
       this.errors.password = '';
     }
     else if (password.errors.hasOwnProperty('required')) {
-      this.errors.password = 'Type your password here. This field has not to be empty.'
+      this.errors.password = 'Type your password here. This field has not to be empty.';
     }
     else if (password.errors.hasOwnProperty('pattern')) {
-      this.errors.password = 'Your password must contain of numbers, capitals and lowercase letters'
+      this.errors.password = 'Your password must contain of numbers, capitals and lowercase letters';
     }
 
     if (!name.errors) {
       this.errors.name = '';
     }
     else if (name.errors.hasOwnProperty('required')) {
-      this.errors.name = 'Type your name here. This field has not to be empty.'
+      this.errors.name = 'Type your name here. This field has not to be empty.';
     }
     else if (name.errors.hasOwnProperty('pattern')) {
-      this.errors.name = 'Your name must contain of Ukrainian, Russian or English letters.'
+      this.errors.name = 'Your name must contain of Ukrainian, Russian or English letters.';
     }
 
     if (!surname.errors) {
       this.errors.surname = '';
     }
     else if (surname.errors.hasOwnProperty('required')) {
-      this.errors.surname = 'Type your surname here. This field has not to be empty.'
+      this.errors.surname = 'Type your surname here. This field has not to be empty.';
     }
     else if (surname.errors.hasOwnProperty('pattern')) {
-      this.errors.surname = 'Your surname must contain of Ukrainian, Russian or English letters.'
+      this.errors.surname = 'Your surname must contain of Ukrainian, Russian or English letters.';
     }
 
     if (!phone.errors) {
       this.errors.phone = '';
     }
     else if (phone.errors.hasOwnProperty('required')) {
-      this.errors.phone = 'Type your phone here. This field has not to be empty.'
+      this.errors.phone = 'Type your phone here. This field has not to be empty.';
     }
     else if (phone.errors.hasOwnProperty('pattern')) {
-      this.errors.phone = 'Your phone must start with "+" and contain 6-15 numbers.'
+      this.errors.phone = 'Your phone must start with "+" and contain 6-15 numbers.';
     }
   }
 }
